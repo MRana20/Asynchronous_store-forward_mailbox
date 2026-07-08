@@ -1,9 +1,3 @@
-"""
-Tests for src/prekey.py. Fail with NotImplementedError until you
-implement load_dh_parameters/generate_prekey/create_signed_bundle/
-verify_bundle/compute_shared_secret.
-"""
-
 import pytest
 
 from src.identity import Identity
