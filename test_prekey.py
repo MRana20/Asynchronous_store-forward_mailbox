@@ -40,8 +40,7 @@ def test_tampered_bundle_fails_verification(parameters):
     bob_dh = generate_prekey(parameters)
     bundle = create_signed_bundle(bob_identity, bob_dh)
 
-    # Simulate a MITM swapping in their own DH public value while
-    # keeping Bob's claimed identity -- signature must fail.
+    
     mallory_dh = generate_prekey(parameters)
     forged_bundle = PrekeyBundle(
         owner="bob",
