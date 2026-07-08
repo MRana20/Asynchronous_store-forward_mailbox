@@ -1,9 +1,3 @@
-"""
-Tests for src/identity.py. These will fail with NotImplementedError
-until you implement Identity.generate/sign/verify -- that's the point,
-use them to check your work as you go.
-"""
-
 from src.identity import Identity
 
 
@@ -32,6 +26,6 @@ def test_verify_fails_with_wrong_public_key():
     mallory = Identity.generate("mallory")
     data = b"some data to sign"
     signature = alice.sign(data)
-    # Mallory's key should NOT validate Alice's signature -- this is the
+    # Mallory's key should NOT validate Alice's signature ; this is the
     # exact check that stops a MITM from substituting their own identity.
     assert Identity.verify(mallory.public_key, data, signature) is False
