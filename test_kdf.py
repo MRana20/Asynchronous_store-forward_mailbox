@@ -1,11 +1,4 @@
-"""
-Tests for src/kdf.py. Fail with NotImplementedError until you implement
-derive_keys.
-"""
-
 from src.kdf import derive_keys
-
-
 def test_derive_keys_returns_32_byte_keys():
     keys = derive_keys(b"some raw shared secret")
     assert len(keys.enc_key) == 32
