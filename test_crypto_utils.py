@@ -1,8 +1,3 @@
-"""
-Tests for src/crypto_utils.py. Fail with NotImplementedError until you
-implement encrypt_and_tag/verify_and_decrypt.
-"""
-
 import pytest
 
 from src.crypto_utils import encrypt_and_tag, verify_and_decrypt
