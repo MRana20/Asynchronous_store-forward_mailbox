@@ -1,5 +1,5 @@
 # (ONGOING) Asynchronous_store-forward_mailbox
-The premise: two users want to exchange encrypted messages without both being online at the same time, and without ever having met to swap keys in person.
+Two users want to exchange encrypted messages without both being online at the same time, and without ever having met to swap keys in person.
 
 Each user generates a long-term RSA keypair (their identity). They also generate a DH keypair (an ephemeral "prekey") and sign the prekey's public value with their RSA private key. They publish their RSA public key and signed prekey to a shared directory.
 When Alice wants to message Bob, she fetches Bob's prekey bundle, verifies the RSA signature against the SHA256 hash to confirm it really came from Bob, then runs the DH exchange to get a shared secret.
